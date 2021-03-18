@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="AliBrowser.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AliBrowser"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource wbBackground}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Pivot Setting View-->
+
+        <Pivot x:Name="WBSettingsPivotView" Grid.Row="1" Title="Settings">
+
+            <PivotItem Header="Bookmarks">
+
+            </PivotItem>
+
+            <PivotItem Header="History">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid x:Name="HistoryListGrid" Grid.Column="1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="32"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Your History" VerticalAlignment="Center" Margin="10,0" Foreground="{StaticResource wbDarkTextColor}"/>
+
+                        <ListBox x:Name="HistoryListBox" Grid.Row="1" Background="{x:Null}" >
+                            <ListBoxItem Style="{StaticResource HistoryList}" Content="Google.com" Background="{StaticResource wbListBoxBackground}" Foreground="{StaticResource wbListBoxForeground}"/>
+                        </ListBox>
+                        
+
+                    </Grid>
+
+                </Grid>
+
+            </PivotItem>
+
+            <PivotItem Header="Search Engine">
+                
+            </PivotItem>
+
+        </Pivot>
+
+
+    </Grid>
+</Page>
